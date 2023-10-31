@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- font Awoaesome link -->
+      <script src="https://kit.fontawesome.com/09a3d3d6d4.js" crossorigin="anonymous"></script>
+      <!-- responsive link and style -->
+      <link rel="stylesheet" href="style.css">
+      <!-- style sheet link -->
+      <!-- <link rel="stylesheet" href="style1.css"> -->
+      <!-- favicon link -->
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <!--  sweeet aleart  link section -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <title>Rgister Form </title>
+</head>
+
+<body>
+
+      <div id="head" class="head  p-2 bg-cyan-600 flex justify-evenly text-white">
+            WELLCOME TO  REGESTIRATION FROM
+
+      </div> 
+
+      
+ 
+      <!-- register sec is start -->
+      <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+            <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                  <h2 id="main_head" class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"> Create your
+                        account</h2>
+                  </div>
+                  
+                  <!-- create a form sec start -->
+                  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                        <form class="space-y-6" action="#" method="POST" id="registrationForm">
+
+                              <div>
+                                    <label for="userName" class="block text-sm font-medium leading-6 text-gray-900">
+                                          UserName
+                                    </label>
+                                    <div class="mt-2">
+                                          <input id="username" name="userName" required
+                                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-7">
+                                    </div>
+                              </div>
+                              
+                              <div>
+                                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">
+                                          Emailaddress
+                                    </label>
+                                    <div class="mt-2">
+                                          <input id="email"  type="email" required
+                                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-7">
+                                    </div>
+                              </div>
+                              
+                              <div>
+                                    <label for="password"
+                              class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                              <div class="mt-2">
+                                    <input id="password" name="password" type="password" autocomplete="current-password"
+                                    required
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-7">
+                              </div>
+                        </div>
+
+                        
+                        
+                        <div>
+                              <button type="submit"
+                              class="flex w-full justify-center rounded-md bg-cyan-900 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-700 ">
+                                    Register
+                              </button>
+                        </div>
+                  </form>
+
+                  <p class="mt-10 text-center text-sm text-gray-500">
+                        Already a Member?
+                        <a href="login.html" class="font-semibold leading-6 text-blue-800 hover:text-indigo-500"> 
+                              LogIn
+                        </a>
+                  </p>
+            </div>
+            <!-- create a form sec start -->
+      </div>
+      <!-- register sec is end  -->
+      
+      
+      <script src="register.js"></script>
+</body>
+
+</html>
