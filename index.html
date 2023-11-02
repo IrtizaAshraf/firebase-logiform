@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Social App</title>
+      <!-- font Awoaesome link -->
+      <script src="https://kit.fontawesome.com/09a3d3d6d4.js" crossorigin="anonymous"></script>
+      <!-- responsive link and style -->
+      <link rel="stylesheet" href="style.css">
+      <!-- style sheet link -->
+      <link rel="stylesheet" href="style1.css">
+      <!-- favicon link -->
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <!--  sweeet aleart  link section -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <title>LOgin form </title>
 </head>
+
 <body>
-      
+      <header class="w-full h-16 bg-sky-500 p-2 text-4xl flex flex-wrap gap-8 text-center justify-between">
+            <h1>Social App</h1>
+            <div id="nav-menu">
+                  <ul class="flex p-2 text-center justify-center gap-3 text-xl  cursor-pointer">
+
+                        <ul class="navbar">
+                              <li><a href="#home">Home</a></li>
+                              <li><a href="#about">About</a></li>
+                              <li><a href="#services">Services</a></li>
+                              <li><a href="#contact">Contact</a></li>
+                        </ul>
+                  </ul>
+            </div>
+      </header>
+      <!-- <div id="head" class="head  p-2 bg-cyan-600 flex justify-evenly text-white">
+            WELLCOME TO WORLD WRIELESS
+            <div class="ml-[60%]">
+                  <a href="loign.html">Login<i class="fa-solid fa-user fa-beat-fade"></i></a>
+            </div>
+            <div class="register">
+                  <a href="register.html"> Register<i class="fa-solid fa-right-to-bracket"></i> </a>
+            </div>
+      </div> -->
+      <div class="container">
+            <!-- Post Form -->
+            <div>
+                  <h2>Create a new post</h2>
+                  <form id="post-form">
+                        <!-- <label for="post-texts">Post:</label> -->
+                        <textarea id="post-text" name="post-text" rows="4" cols="50"></textarea><br>
+                        <button type="submit">Post</button>
+                  </form>
+            </div>
+
+            <!-- Posts Section -->
+            <div id="posts">
+                  <!-- Posts will be dynamically added here using JavaScript -->
+            </div>
+      </div>
+
+    <script type="module" src="index.js"></script>
 </body>
+
 </html>

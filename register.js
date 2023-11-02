@@ -12,30 +12,30 @@
 //     e.preventDefault();
 //     createUserWithEmailAndPassword(auth, email.value, password.value)
 //   .then((userCredential) => {
-   
-      //     const user = userCredential.user;
-      //     console.log(user);
-      //   })
-      //   .catch((error) => {
-            //     const errorCode = error.code;
-            //     const errorMessage = error.message;
-            // //    console.log(errorCode);
-            //   });
-            // })
-            
-            
-            
-            
-            
-            
-            
-            
+
+//     const user = userCredential.user;
+//     console.log(user);
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+// //    console.log(errorCode);
+//   });
+// })
+
+
+
+
+
+
+
+
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import { auth } from "./config.js";
-            
-            
+
+
 const registrationForm = document.querySelector('#registrationForm');
-const form = document.querySelector('#form');
+// const form = document.querySelector('#form');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 
@@ -46,6 +46,19 @@ registrationForm.addEventListener('submit', (event) => {
         .then((userCredential) => {
             const user = userCredential.user;
             console.log(user);
+
+            Swal.fire({
+                title: 'Registerd the User Successfully',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            }).then(() => {
+                // Optionally, you can redirect to another page after successful registration
+                window.location.href = 'login.html';
+            })
             email.value = ''
             password.value = ''
         })
