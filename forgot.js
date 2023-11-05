@@ -13,13 +13,28 @@ forgotpassword.addEventListener('submit', (event) => {
             .then(() => {
                   // Password reset email sent!
                   // ..
-                  swal("congratetulation!",  "Your password Hass Been Resst!", "Please check your Email@")
+                  // swal("congratetulation!",  "Your password Hass Been Resst!", "Please check your Email@")
+                  Swal.fire({
+                        title: 'congratetulation!",  "Your password Hass Been Resst!", "Please check your Email@',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    })
             }) 
             .catch((error) => {
                   const errorCode = error.code;
                   const errorMessage = error.message;
                   // ..
-                  swal("Sorry!",  "Please Enter the correct Email@", "Password has been reset suecssfully")
+                  // swal("Sorry!",  "Please Enter the correct Email@", "Password has been reset suecssfully")
+                  Swal.fire({
+                        title: 'Sorry! Failed!',
+                        text: '"Please Enter the correct Email@", "Password has been reset suecssfully',
+                        icon: 'error'
+                    });
             });
+
 
 })

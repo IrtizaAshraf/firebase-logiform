@@ -113,9 +113,11 @@ loginform.addEventListener('submit', (event) => {
                 showConfirmButton: false,
                 timer: 1500,
                 willClose: () => {
-                    window.location.href = 'index.html'; // Redirect after the alert is closed
+                    window.location.href = 'home.html'; // Redirect after the alert is closed
                 }
             });
+            email.value=''
+            password.value=''
             // window.location = 'index.html'
         })
         .catch((error) => {

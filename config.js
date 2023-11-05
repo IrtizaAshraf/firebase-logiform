@@ -1,6 +1,14 @@
+/// past the initializapp link for  firebase --------->> 
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+
+// past the  Auth link  for firebase ------------> 
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 
+//firestore link past the firebass app =---------->
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+
+/// Genrate the  firebase config ----------->
 const firebaseConfig = {
       apiKey: "AIzaSyBpXWQhUCd0YiakwWoScpXeKjGfBuJI7V4",
       authDomain: "social-app-522a2.firebaseapp.com",
@@ -14,3 +22,4 @@ const firebaseConfig = {
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const db = getFirestore(app);
