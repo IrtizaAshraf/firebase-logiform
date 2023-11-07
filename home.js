@@ -82,7 +82,7 @@ const card = document.querySelector('#card');
 let arry = []
 async function gateDatafirebase() {
       arry.length= 0;
-      card.innerHTML= '';
+      // card.innerHTML= '';
       const postsQuery = query(collection(db, "post"), orderBy('postDate', 'desc'));
       const querySnapshot = await getDocs(postsQuery);
       querySnapshot.forEach((doc) => {
