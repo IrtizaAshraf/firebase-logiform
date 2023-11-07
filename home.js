@@ -4,7 +4,7 @@
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import { auth, db } from "./config.js";
 // firestore link pastt -------->
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js"; 
+import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 
 
@@ -37,24 +37,24 @@ logout.addEventListener('click', () => {
 
 
 
-
+const card = document.querySelectorAll('#posts')
 
 // Add your JavaScript code here for interactivity
 
-document.getElementById("post-form").addEventListener("submit", async (event)=> {
+document.getElementById("post-form").addEventListener("submit", async (event) => {
       event.preventDefault();
       var postText = document.getElementById("post-text").value;
       // console.log(auth.currentUser.uid);
       try {
             const docRef = await addDoc(collection(db, "post"), {
-              Tittle:postText,
-            //   discription:discription.value,
-              uid:auth.currentUser.uid       
+                  Tittle: postText,
+                  //   discription:discription.value,
+                  uid: auth.currentUser.uid
             });
             console.log("Document written with ID: ", docRef.id);
-          } catch (e) {
+      } catch (e) {
             console.error("Error adding document: ", e);
-          }
+      }
       // Check if postText is not empty
       if (postText.trim() !== "") {
             var postsContainer = document.getElementById("posts");
@@ -68,3 +68,30 @@ document.getElementById("post-form").addEventListener("submit", async (event)=> 
             alert("Please enter a valid post.");
       }
 });
+
+
+// get firebasedata  in firestore------------>
+
+
+let arry = []
+async function gateDatafirebase() {
+      const querySnapshot = await getDocs(collection(db, "post"));
+      querySnapshot.forEach((doc) => {
+            arry.push(doc.data());
+      });
+      console.log(arry);
+      arry.map((item) => {
+            card.innerHTML += `
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            </div>
+            <img src="..." class="card-img-top" alt="...">
+            `
+      })
+}
+
+gateDatafirebase()
