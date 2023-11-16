@@ -8,6 +8,10 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth
 //firestore link past the firebass app =---------->
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
+//firestorage link past the firebass app =---------->
+import { getStorage } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-storage.js";
+
+
 /// Genrate the  firebase config ----------->
 const firebaseConfig = {
       apiKey: "AIzaSyBpXWQhUCd0YiakwWoScpXeKjGfBuJI7V4",
@@ -23,3 +27,4 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+export const storage = getStorage(app);
